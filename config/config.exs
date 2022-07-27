@@ -9,5 +9,5 @@ config :crawly,
   ],
   pipelines: [
     Crawly.Pipelines.JSONEncoder,
-    {Crawly.Pipelines.WriteToFile, extension: "json", folder: "/crawly"}
+    {Crawly.Pipelines.WriteToFile, extension: "json", folder: "/local/crawly"}
   ]
