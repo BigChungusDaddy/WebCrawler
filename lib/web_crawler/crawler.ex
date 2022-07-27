@@ -34,13 +34,13 @@ defmodule Crawler do
   defp extract_all_urls(document) do
     page_num_urls = extract_url_from_page_number(document)
     page_main_urls = extract_url_from_category_page(document)
-    page_latest_stories_urls = extract_url_from_latest_stories(document)
+    #page_latest_stories_urls = extract_url_from_latest_stories(document)
     page_staff_urls = extract_url_from_staff_page(document)
 
     temp_list_1 = page_num_urls ++ page_main_urls
-    temp_list_2 = page_latest_stories_urls ++ page_staff_urls
+    # temp_list_2 = page_latest_stories_urls ++ page_staff_urls
 
-    urls = temp_list_1 ++ temp_list_2 |> Enum.uniq()
+    urls = temp_list_1 ++ page_staff_urls |> Enum.uniq()
     urls
   end
 
