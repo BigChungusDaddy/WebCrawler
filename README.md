@@ -1,21 +1,19 @@
 # WebCrawler
 
-**TODO: Add description**
+A simple web crawler used to extract comments on https://dailyutahchronicle.com/.
 
-## Installation
+## To Use
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `web_crawler` to your list of dependencies in `mix.exs`:
+1. Install Elixir according to https://elixir-lang.org/install.html.
 
-```elixir
-def deps do
-  [
-    {:web_crawler, "~> 0.1.0"}
-  ]
-end
+2. Fetch dependencies:
+
+```console
+mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/web_crawler>.
-
+3. Start the crawl:
+``` console
+iex -S mix
+iex(1)> Crawly.Engine.start_spider(Crawler)
+```
